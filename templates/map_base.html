@@ -1,0 +1,24 @@
+<!--
+ @license
+ Copyright 2019 Google LLC. All Rights Reserved.
+ SPDX-License-Identifier: Apache-2.0
+-->
+<html>
+  <head>
+    <title>{% block title %} {% endblock %}</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}" />
+    
+    {% block module %} {% endblock %}
+  </head>
+  <body>
+    <h3>Park Maps</h3>
+    <!--The div element for the map -->
+    <div id="map"></div>
+
+    <!-- prettier-ignore -->
+    {% block script %} {% endblock %}
+    
+  </body>
+</html>
